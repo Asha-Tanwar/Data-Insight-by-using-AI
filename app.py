@@ -361,7 +361,7 @@ if target_gp:
       unique_count=df_new[x].nunique()
       if unique_count>20:
         st.warning(f"{x} has uniques values more than 20. Chart may get cluttered,thus we take only 6 values to get idea ")
-        sns.boxplot(data=df_new,
+        sns.distplot(data=df_new,
         x=df_new[x].sample(6),
         ax=ax)
       else:
@@ -519,6 +519,7 @@ if st.button("Clear Chat", use_container_width=True):
 # </style>
 # """,unsafe_allow_html=True)
  
+
 
 
 
