@@ -4,6 +4,8 @@ from google import genai
 from google.genai import types
 import matplotlib.pyplot as plt
 import seaborn as sns
+from scipy import constants
+
 
 st.set_page_config(page_title="AI analyst", page_icon="📑")
 
@@ -322,7 +324,7 @@ if target_gp:
         unique_count=df_new[x].nunique()
         if unique_count>20:
          st.warning(f"{x} has uniques values more than 20. Chart may get cluttered,thus we take only 6 values to get idea ")
-         sns.boxplot(data=df_new,
+         sns.barplot(data=df_new,
           x=df_new[x].sample(6),
          y=df_new[y].sample(6),
          ax=ax)
@@ -519,6 +521,7 @@ if st.button("Clear Chat", use_container_width=True):
 # </style>
 # """,unsafe_allow_html=True)
  
+
 
 
 
