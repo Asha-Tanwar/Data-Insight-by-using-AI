@@ -4,6 +4,7 @@ from google import genai
 from google.genai import types
 import matplotlib.pyplot as plt
 import seaborn as sns
+import scipy
 
 
 
@@ -521,6 +522,7 @@ if st.button("Clear Chat", use_container_width=True):
 # </style>
 # """,unsafe_allow_html=True)
  
+
 
 
 
