@@ -20,7 +20,7 @@ def generate_answer(client, prompt):
         contents=prompt,
         config=types.GenerateContentConfig( 
             temperature=0.3,
-            max_output_tokens=1000
+            max_output_tokens=10000
         )
     )
     return response.text
@@ -522,6 +522,7 @@ if st.button("Clear Chat", use_container_width=True):
 # </style>
 # """,unsafe_allow_html=True)
  
+
 
 
 
