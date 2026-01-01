@@ -416,6 +416,7 @@ if target_gp:
       cluster_fig=sns.clustermap(
       df_new.select_dtypes(include='number'))
       st.pyplot(cluster_fig.fig)
+      ax.set_title(f"Clustermap")
     elif target_gp=='Line':
         if not pd.api.types.is_numeric_dtype(df_new[x]):
             st.warning("X axis must be numeric")
@@ -522,6 +523,7 @@ if st.button("Clear Chat", use_container_width=True):
 # </style>
 # """,unsafe_allow_html=True)
  
+
 
 
 
